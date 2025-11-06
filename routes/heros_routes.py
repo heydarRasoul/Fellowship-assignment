@@ -9,9 +9,9 @@ def create_hero_route():
     return controllers.create_hero()
 
 
-@hero.route('/hero-quest', methods=['POST'])
-def add_hero_to_quest_route():
-    return controllers.add_hero_to_quest()
+# @hero.route('/hero-quest', methods=['POST'])
+# def add_hero_to_quest_route():
+#     return controllers.add_hero_to_quest()
 
 
 @hero.route('/heros', methods=['GET'])

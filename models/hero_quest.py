@@ -26,8 +26,7 @@ class HeroQuestsSchema(ma.Schema):
     class Meta:
         fields = ['hero','quest','date_joined']
    
-    # hero_id = ma.fields.UUID(required=True)
-    # quest_id = ma.fields.UUID(required=True)
+   
     date_joined = ma.fields.DateTime()
   
     hero = ma.fields.Nested("HerosSchema") 

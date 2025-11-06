@@ -8,6 +8,9 @@ realm = Blueprint('realm', __name__)
 def add_realm_route():
    return controllers.add_realm()
 
+@realm.route('/realms', methods= ['GET'])
+def get_all_realm_route():
+    return controllers.get_all_realm()
 
 @realm.route('/realm/<realm_id>', methods= ['GET'])
 def get_realm_by_id_route(realm_id):

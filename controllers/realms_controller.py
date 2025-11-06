@@ -20,6 +20,15 @@ def add_realm():
 
     return jsonify({"message": "realm created", "result": realm_schema.dump(new_realm)}), 201
 
+def get_all_realm():
+    realm_query = db.session.query(Realms).all()
+
+    if not realm_query:
+        return jsonify({"message": "no realm founded."})
+    else:
+        return jsonify({"message": "realm found", "result": realms_schema.dump(realm_query)}),200
+    
+
 
 def get_realm_by_id(realm_id):
     realm_query = db.session.query(Realms).filter(Realms.realm_id == realm_id ).first()

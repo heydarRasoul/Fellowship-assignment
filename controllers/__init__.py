@@ -5,3 +5,4 @@ from .location_controller import *
 from .quests_controller import *
 from .races_controller import *
 from .realms_controller import *
+from .hero_queat_controller import *

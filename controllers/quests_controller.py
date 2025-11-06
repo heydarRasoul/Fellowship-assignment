@@ -23,13 +23,13 @@ def create_quest():
     return jsonify({"message": "quest created", "result": quest_schema.dump(new_quest)}), 201
 
 
-def get_quest_difficulty_level():
-    difficulty_level_query = db.session.query(Quests).filter(Quests.difficulty_level).all()
+def get_quest_difficulty_level(difficulty):
+    difficulty_level_query = db.session.query(Quests).filter(Quests.difficulty==difficulty).all()
 
     if not difficulty_level_query:
         return jsonify({"message":"no quest found"}),400
     else:
-        return jsonify({"message":"quest found", "results":quest_schema.dump(difficulty_level_query)}),200
+        return jsonify({"message":"quest found", "results":quests_schema.dump(difficulty_level_query)}),200
     
 
 def get_quest_by_id(quest_id):

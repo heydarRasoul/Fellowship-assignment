@@ -23,7 +23,7 @@ class Locations(db.Model):
         self.danger_level = danger_level
 
     def new_location_obj():
-        return Locations('','','')
+        return Locations('','',0)
 
 
 class LocationsSchema(ma.Schema):

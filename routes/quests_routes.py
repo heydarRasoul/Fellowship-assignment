@@ -8,9 +8,9 @@ quest = Blueprint('quest', __name__)
 def create_quest_route():
     return controllers.create_quest()
 
-@quest.route('/quests/<difficulty_level>', methods=['GET'])
-def get_quest_difficulty_leve_route():
-    return controllers.get_quest_difficulty_leve()
+@quest.route('/quests/<difficulty>', methods=['GET'])
+def get_quest_difficulty_leve_route(difficulty):
+    return controllers.get_quest_difficulty_level(difficulty)
 
 
 @quest.route('/quest/<quest_id>', methods=['GET'])

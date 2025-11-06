@@ -28,7 +28,7 @@ class Abilities(db.Model):
 class AbilitiesSchema(ma.Schema):
     
     class Meta:
-        fields = ['hero', 'ability_name', 'power_level']
+        fields = ['ability_id','hero', 'ability_name', 'power_level']
 
     ability_id = ma.fields.UUID() 	
     ability_name = ma.fields.String(required=True)	

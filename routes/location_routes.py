@@ -1,7 +1,7 @@
 from flask import Blueprint
 import controllers
 
-location = Blueprint('warranty', __name__)
+location = Blueprint('location', __name__)
 
 
 @location.route('/location', methods=['POST'])
@@ -17,5 +17,5 @@ def update_location_by_id_route(location_id):
    return controllers.update_location_by_id(location_id)
 
 @location.route('/location/delete/<location_id>', methods=['DELETE'])
-def delete_location_by_id_route(warranty_id):
-   return controllers.delete_location_by_id(warranty_id)
+def delete_location_by_id_route(location_id):
+   return controllers.delete_location_by_id(location_id)

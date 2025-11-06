@@ -6,7 +6,7 @@ ability = Blueprint('ability', __name__)
 
 @ability.route('/ability', methods=['POST'])
 def add_ability_route():
-   return controllers.ability()
+   return controllers.add_ability()
 
 
 @ability.route('/ability/<ability_id>', methods=['PUT'])

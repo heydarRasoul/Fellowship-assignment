@@ -6,6 +6,7 @@ from routes.location_routes import location
 from routes.quests_routes import quest
 from routes.races_routes import race
 from routes.realms_routes import realm
+from routes.hero_quest_routes import hero_quest
 
 
 def register_blueprints(app):
@@ -15,3 +16,4 @@ def register_blueprints(app):
     app.register_blueprint(quest)
     app.register_blueprint(race)
     app.register_blueprint(realm)
+    app.register_blueprint(hero_quest)

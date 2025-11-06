@@ -9,7 +9,7 @@ from util.reflection import populate_object
 def add_location():
     post_data = request.form if request.form else request.get_json()
 
-    location = Locations.location_obj()
+    location = Locations.new_location_obj()
     populate_object(location, post_data)
 
     try:
